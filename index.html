@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>Velo Rapido</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="menu-toggler" onclick="toggleMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <div class="nav-overlay" id="navOverlay">
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#education">Book Now</a></li>
+                    <li><a href="#project">Schedule</a></li>
+                    <li><a href="#contact">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="playfair-display" id="text-container">
+        <span id="text"></span><span id="cursor"></span>
+    </div>
+    <img class="vehicle" id="scoot" src="./assets/scoot-front.png" alt="">
+
+    <div class="buttons">
+        <button>Sign Up</button>
+        <button>Login</button>
+    </div>
+
+    <script src="./scripts/index.js"></script>
+    <script src="./scripts/vehicleParallax.js"></script>
+    <script src="./scripts/navbar.js"></script>
+</body>
+</html>

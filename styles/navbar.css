@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Quicksand:wght@300..700&display=swap');
+
+.navbar {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.menu-toggler {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.line {
+    width: 30px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 5px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgba(221, 199, 55, 0.5); /* Adjust opacity as needed */
+    backdrop-filter: blur(8px);
+    font-family: "Major Mono Display", monospace;
+    font-style: normal;
+    overflow: hidden;
+    transition: width 0.5s ease, clip-path 0.5s ease; /* Smooth transition for width and clip-path */
+    clip-path: polygon(0% 0%, 0% 100%, 0% 100%, 0% 0%);
+    z-index: 900;
+}
+
+.nav-overlay.open {
+    width: 30vw; /* Limit width to 30% of viewport width */
+    clip-path: polygon(0% 0%, 100% 0%, 70% 100%, 0% 100%); /* Adjust the clip-path to create an arc effect */
+}
+
+
+.nav-links {
+    position: absolute;
+    top: 50%;
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    color: #f8f5f5;
+    font-size: 40px;
+    font-weight: bold;
+    z-index: 1; /* Ensure it's above the overlay */
+}
+
+.nav-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav-links ul li {
+    margin: 10px 0;
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    color: inherit; /* Inherit text color from parent */
+}
+
+.open .line:nth-child(1) {
+    transform: rotate(-45deg) translate(-2px, 4px);
+}
+
+.open .line:nth-child(2) {
+    opacity: 0;
+}
+
+.open .line:nth-child(3) {
+    transform: rotate(45deg) translate(-2px, -4px);
+}

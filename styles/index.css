@@ -1,0 +1,92 @@
+body {
+  background-color: black;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Quicksand:wght@300..700&display=swap');
+
+@font-face {
+  font-family: 'CustomFont';
+  src: url('https://drive.google.com/uc?export=download&id=1sqHRjp5meex86YyrdErlL39HfM3eoZdv') format('truetype');
+}
+
+.playfair-display {
+  margin: 100px;
+  font-family: 'CustomFont', serif;
+  color: white;
+  font-size: 90px;
+  max-width: 650px;
+  height: 300px;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #FFD700 0%, #FFB400 20%, #FFA500 40%, #FF8C00 60%, #FFA500 80%, #FFD700 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* Standard property */
+  font-size: 120px;
+}
+
+/* Define initial position of the vehicle */
+.vehicle {
+  max-height: 880px;
+  max-width: 880px;
+  position: absolute;
+  margin: 50px;
+  top: 545px;
+  left: 1172px;
+  transform: translate(-50%, -50%);
+  opacity: 0; /* Initially hidden */
+  transition: opacity 1s ease; /* Smooth transition */
+}
+
+/* Define animation for vehicle */
+@keyframes vehicleAnimation {
+  0% { transform: translate(-50%, -50%) scale(1.2); opacity: 0; } /* Start offscreen and invisible */
+  100% { transform: translate(-50%, -50%) scale(1); opacity: 1; } /* Move to center and become visible */
+}
+
+/* Float animation */
+@keyframes floatUpDown {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-60px);
+  }
+}
+
+/* Header Animation */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  50% { opacity: 0 }
+}
+
+.buttons {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-left: -410px; /* Adjust the margin to move the buttons horizontally */
+  z-index: 500;
+}
+
+.buttons button {
+  background-color: #FFD700; /* Yellow background */
+  border: none;
+  font-family: "Quicksand", monospace;
+  font-weight: 450;
+  border-radius: 20px; /* Rounded corners */
+  padding: 20px 40px;
+  margin: 0 30px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  z-index: 500;
+}
+
+.buttons button:hover {
+  background-color: #FFC107; /* Darker yellow on hover */
+}
+
