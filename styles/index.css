@@ -66,10 +66,12 @@ body {
 }
 
 .buttons {
-  position: relative;
+  position: fixed;
   display: flex;
   justify-content: center;
-  margin-left: -410px; /* Adjust the margin to move the buttons horizontally */
+  top: 0;
+  left: 73vw;
+  margin-top: 20px;
   z-index: 500;
 }
 
