@@ -65,14 +65,18 @@ body {
   50% { opacity: 0 }
 }
 
+#about{
+  font-size: 50px;
+  
+}
+
 .buttons {
-  position: fixed;
+  position: relative;
   display: flex;
   justify-content: center;
-  top: 0;
-  left: 73vw;
+  top: 6px;
+  left: 548px;
   margin-top: 20px;
-  z-index: 500;
 }
 
 .buttons button {
