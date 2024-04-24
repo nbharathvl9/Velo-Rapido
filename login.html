@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/login.css">
+    <title>Login - Velo Rapido</title>
+
+</head>
+<body>
+    <div class="navbar">
+        <div class="menu-toggler" onclick="toggleMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <div class="nav-overlay" id="navOverlay">
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#booknow">Book Now</a></li>
+                    <li><a href="#schedule">Schedule</a></li>
+                    <li><a href="#contact">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <img class="vespa" src="./assets/vespa.jpg" alt="Vespa">
+    <div class="form">
+        <div class="inputFields">
+            <input type="text" id="phoneNumber">
+
+            <input type="password" id="pwd">
+        </div>
+    </div>
+    <hr>
+    <script src="scripts/navbar.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+body{
+    background-color: black;
+}
+
+.vespa{
+    position: relative;
+    top: 6vh;
+    left: 10vw;
+    z-index: -1;
+    height: 650px;
+    width: auto;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    box-shadow: -15px 0 25px rgba(221, 199, 55, 0.2), 0 15px 25px rgba(221, 199, 55, 0.2); 
+}
+
+.form{
+    position: relative;
+    top: -83.5vh;
+    left: 37vw;
+    width: 45vw;
+    box-shadow: 15px 15px 25px rgba(221, 199, 55, 0.2);
+    height: 86.1vh;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    backdrop-filter: blur(14px);
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    text-align: center;
+}
+
+#pwd{
+    position: relative;
+    border: none;
+    width: 15vw;
+    height: 5vh;
+    background-color: rgb(69, 70, 65);
+    border-radius: 8px;
+    margin: 30px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+#pwd:focus{
+    outline: 2.5px solid rgba(221, 199, 55, 0.8);
+}
+
+#phoneNumber {
+    position: relative;
+    border: none;
+    width: 15vw;
+    height: 5vh;
+    background-color: rgb(69, 70, 65);
+    border-radius: 8px;
+    margin: 30px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+#phoneNumber:focus{
+    outline: 2.5px solid rgba(221, 199, 55, 0.8);
+}
+
+.inputFields{
+    display: grid;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+
