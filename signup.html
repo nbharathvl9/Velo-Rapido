@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styles/signup.css">
+</head>
+<body>
+    <div class="parent">
+
+    <div class="container">
+        <h1 id="sighup">Sigh Up</h1>
+        <div><input type="text" placeholder="Your Name"  class="inputsize"  id="Yourname" required></div>
+        <div><input type="tel" placeholder="Phonenumber"  class="inputsize" id="phonenumber" pattern="[0-9]{10}" maxlength="10" title="Please enter a 10-digit phone number" required></div>
+        <div>
+            <input type="password" placeholder="Enter password" class="inputsize" id="epassword" required>
+            <button id="togglePassword" style="font-size: large;">&#x1F441;</button>
+        </div>
+        <div>
+            <input type="password" placeholder="Confirm password" class="inputsize" id="cpassword" required>
+            <button id="toggleCPassword" style="font-size: large;">&#x1F441;</button>
+        </div>
+        <div><input type="submit" value="Submit" id="submit"></div>
+        
+        <a href="" id="login">Already have an account? Login In</a>
+
+    </div></div>
+  
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const togglePassword = document.getElementById('togglePassword');
+    const togglcPassword = document.getElementById('toggleCPassword');
+    const passwordField = document.getElementById('epassword');
+    const passwordCField = document.getElementById('cpassword');
+
+
+    togglePassword.addEventListener('click', function () {
+        const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+        passwordField.setAttribute('type', type);
+        togglePassword.textContent = type === 'password' ? 'Show' : 'Hide';
+    })
+    toggleCPassword.addEventListener('click', function () {
+        const type = passwordCField.getAttribute('type') === 'password' ? 'text' : 'password';
+        passwordCField.setAttribute('type', type);
+        toggleCPassword.textContent = type === 'password' ? 'Show' : 'Hide';
+    });
+});
+
+</script>
+</html>
