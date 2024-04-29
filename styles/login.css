@@ -56,7 +56,7 @@ body{
   .form-control input:focus,
   .form-control input:valid {
     outline: 0;
-    border-bottom-color: rgba(221, 199, 55, 0.5);;
+    border-bottom-color: #FFD700;
   }
   
   .form-control label {
@@ -76,7 +76,7 @@ body{
   
   .form-control input:focus+label span,
   .form-control input:valid+label span {
-    color: rgba(221, 199, 55, 0.5);;
+    color: #FFD700;
     transform: translateY(-30px);
   }
 
