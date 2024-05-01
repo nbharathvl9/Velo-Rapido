@@ -10,8 +10,8 @@
     border-radius: 23px;
     transition: all 0.8s cubic-bezier(0.15, 0.83, 0.66, 1);
     cursor: pointer;
-    top: 0vh;
-    left: 10vw;
+    top: 5vh;
+    left: 69vw;
     font-family: "Noto Sans", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;

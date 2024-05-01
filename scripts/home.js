@@ -67,8 +67,14 @@ function showPosition(position) {
         })
         .catch(error => console.log('Error fetching location data:', error));
 
-    const temperature = 23; 
-    document.querySelector(".temp").innerHTML = temperature + "°";
+        fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=8b7d1ed40b332b731beb9ee190eab6d9`)
+        .then(response => response.json())
+        .then(data => {
+            const temperature = Math.round(data.main.temp);
+            document.querySelector(".temp").innerHTML = temperature + "°";
+        })
+        .catch(error => console.log('Error fetching weather data:', error));
+
 }
 
 function showError(error) {
