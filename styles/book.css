@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+body{
+    background-color: black;
+}
+
+.bookForm{
+    margin: 60px;
+    position: relative;
+    top: 8vh;
+    left: 10vw;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    background-color: #212121;
+    padding: 20px;
+    border-radius: 15px;
+    width: 30vw;
+}
+
+
+select {
+    padding: 10px;
+    border: none;
+    background-color: #212121;
+    color: white; 
+    outline: none;
+    width: fit-content;
+    text-align: center;
+    font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    transition: border-color 0.3s;
+    border-bottom: 1px solid #ffd700;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+select::-webkit-scrollbar {
+    display: none;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+select option {
+    animation: fadeIn 0.5s ease-in-out forwards;
+    
+}
+
+
+
+.bookForm input[type="text"] {
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid #ffd700;
+    color: white;
+    outline: none;
+    width: 100px;
+    text-align: center;
+    font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.bookForm input[type="text"]::placeholder {
+    color: white;
+}
+
+
+#hours {
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid #ffd700;
+    color: white;
+    outline: none;
+    width: 50px;
+    text-align: center;
+    font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    transition: border-color 0.3s;
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+#hours::-webkit-inner-spin-button,
+#hours::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#hours::-moz-number-spin-box {
+    appearance: textfield;
+}
+
+
+#hours:focus {
+    border-color: dodgerblue;
+}
+
+/* Animation for the hour input */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#hours::placeholder {
+    color: white;
+}
+
+
+#hours:focus::placeholder {
+    animation: fadeIn 0.5s ease-in-out forwards;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/book.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <title>Velo Rapido</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="menu-toggler" onclick="toggleMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <div class="nav-overlay" id="navOverlay">
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#booknow">Book Now</a></li>
+                    <li><a href="#schedule">Schedule</a></li>
+                    <li><a href="#contact">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="bookForm" style="color: white;">
+        <h1>Book Now</h1>
+        <p style="margin-top: 20px;">I am at  <input type="text" id="from" placeholder=""> and I want to go to <input type="text" id="to" placeholder="">.</p>
+        <p>I would like a 
+            <select id="vehicles" style="color: white;">
+                <option value="Pleasure">Pleasure</option>
+                <option value="Activa">Activa</option>
+                <option value="Fascino">Fascino</option>
+                <option value="Vespa">Vespa</option>
+                <option value="Dio">Dio</option>
+            </select>
+        </p>
+        <p> for <input type="number" name="hours" id="hours" min="1" max="24" value="1"> hours.</p>
+
+        <div id="map" style="margin: 40px; height: 300px;"></div>
+
+    </div>
+
+    <div class="verify">
+        <h1>Verify Details</h1>
+
+    </div>
+    <script src="./scripts/navbar.js"></script>
+    <script src="./scripts/map.js"></script>
+</body>
+</html>

@@ -2,9 +2,11 @@ const currentDate = new Date();
 const month = currentDate.toLocaleString('default', { month: 'long' });
 const day = currentDate.getDate();
 const formattedDate = `${month} ${day}`;
-const cardHeaderSpan = document.querySelector('.card-header span:last-child');
-cardHeaderSpan.textContent = formattedDate;
-
+const cardCity = document.querySelector('.card .city');
+const cardWeather = document.querySelector('.card .weather');
+const cardTemp = document.querySelector('.card .temp');
+const cardMinTemp = document.querySelector('.card .minTemp');
+const cardMaxTemp = document.querySelector('.card .maxTemp');
 
 const currentHour = currentDate.getHours();
 
@@ -14,29 +16,10 @@ if (currentHour >= 18) {
     sunIcons.forEach(icon => {
         icon.style.background = 'linear-gradient(to right, #ffffff, #ffffff)';
     });
-
-    const card = document.querySelector('.card');
-    card.style.background = 'linear-gradient(to bottom left, #000033 0%, #000066 100%)';
-
-    const cardfont = document.querySelector('.card-header span:first-child');
-    cardfont.style.color = 'white';
-
-    const cardDate = document.querySelector('.card-header span:last-child');
-    cardDate.style.color = 'white';
-
-    const cardTemp = document.querySelector('.temp');
-    cardTemp.style.color = 'white';
-
-    const cardTempScale = document.querySelector('.temp-scale span');
-    cardTempScale.style.color = 'white';
-
 }
 
 
-
-
 // Get location of user using open street view maps api
-
 window.onload = function() {
     getLocation();
 };
@@ -45,7 +28,7 @@ function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition, showError);
     } else {
-        document.querySelector(".card-header span:first-child").innerHTML = "Geolocation is not supported by this browser.";
+        cardCity.innerHTML = "Geolocation is not supported by this browser.";
     }
 }
 
@@ -63,33 +46,34 @@ function showPosition(position) {
             }
             const area = data.address.suburb;
             const country = data.address.country;
-            document.querySelector(".card-header span:first-child").innerHTML = `${area}, ${city}<br>${country}`;
+            cardCity.innerHTML = `${area}, ${city}<br><p style="font-size: 12px;">${country}<p>`;
         })
         .catch(error => console.log('Error fetching location data:', error));
 
-        fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=8b7d1ed40b332b731beb9ee190eab6d9`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=8b7d1ed40b332b731beb9ee190eab6d9`)
         .then(response => response.json())
         .then(data => {
             const temperature = Math.round(data.main.temp);
-            document.querySelector(".temp").innerHTML = temperature + "°";
+            const weatherDescription = data.weather[0].description;
+            cardWeather.innerHTML = weatherDescription.toUpperCase();
+            cardTemp.innerHTML = temperature + "°";
         })
         .catch(error => console.log('Error fetching weather data:', error));
-
 }
 
 function showError(error) {
     switch(error.code) {
         case error.PERMISSION_DENIED:
-            document.querySelector(".card-header span:first-child").innerHTML = "User denied the request for Geolocation.";
+            cardCity.innerHTML = "User denied the request for Geolocation.";
             break;
         case error.POSITION_UNAVAILABLE:
-            document.querySelector(".card-header span:first-child").innerHTML = "Location information is unavailable.";
+            cardCity.innerHTML = "Location information is unavailable.";
             break;
         case error.TIMEOUT:
-            document.querySelector(".card-header span:first-child").innerHTML = "The request to get user location timed out.";
+            cardCity.innerHTML = "The request to get user location timed out.";
             break;
         case error.UNKNOWN_ERROR:
-            document.querySelector(".card-header span:first-child").innerHTML = "An unknown error occurred.";
+            cardCity.innerHTML = "An unknown error occurred.";
             break;
     }
 }
