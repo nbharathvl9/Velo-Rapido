@@ -1,11 +1,35 @@
+@media only screen and (max-height: 550px) {
+  .socket {
+    opacity: 0;
+    animation: fadeOut 0.5s ease-out forwards;
+    display: none;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .socket {
+    opacity: 0;
+    animation: fadeOut 0.5s ease-out forwards;
+    display: none;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 .socket {
-  width: 300px;
-  height: 300px;
+  opacity: 1;
+  width: 15vw;
+  height: 45vh;
   position: absolute;
-  left: 70%;
-  margin-left: -100px;
-  top: 15%;
-  margin-top: -100px;
+  left: 32vw;
+  margin-left: -5vw;
+  top: 13vh;
+  margin-top: -11vh;
   transition: transform 1s ;
 }
 
@@ -15,8 +39,8 @@
 
 .hex-brick {
   background: rgba(221, 199, 55, 0.5);
-  width: 30px;
-  height: 17px;
+  width: 2vw;
+  height: 1.55vh;
   position: absolute;
   top: 5px;
   animation-name: fade00;
