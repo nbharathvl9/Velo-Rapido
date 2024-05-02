@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
 
-body{
+body {
     background-color: black;
 }
 
-.main{
+.main {
     display: flex;
     flex-direction: row;
 }
 
-.verify{
+.verify {
     display: flex;
     flex-direction: column;
     color: white;
@@ -18,9 +18,9 @@ body{
 .input {
     max-width: 190px;
     display: none;
-  }
-  
-  .labelFile {
+}
+
+.labelFile {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -32,13 +32,10 @@ body{
     padding: 5px;
     color: #404040;
     cursor: pointer;
-  }
-  
+}
 
-
-
-.bookForm{
-    z-index: -500 ;
+.bookForm {
+    z-index: -500;
     margin: 60px;
     position: relative;
     top: 8vh;
@@ -52,7 +49,7 @@ body{
     width: 30vw;
 }
 
-.verify{
+.verify {
     margin: 60px;
     position: relative;
     top: 8vh;
@@ -67,13 +64,11 @@ body{
     width: 30vw;
 }
 
-
-
 select {
     padding: 10px;
     border: none;
     background-color: #212121;
-    color: white; 
+    color: white;
     outline: none;
     width: fit-content;
     text-align: center;
@@ -83,6 +78,9 @@ select {
     transition: border-color 0.3s;
     border-bottom: 1px solid #ffd700;
 }
+
+/* Other CSS styles... */
+
 
 select::-ms-expand {
     display: none;
@@ -288,9 +286,7 @@ div.leaflet-control-zoom a:last-child{
     z-index: 10;
     flex-direction: column;
     align-items: center;
-    -webkit-box-shadow: 9px 9px 9px -2px rgba(77, 200, 143, 0.72);
-    -moz-box-shadow: 9px 9px 9px -2px rgba(77, 200, 143, 0.72);
-    -webkit-box-shadow: 9px 9px 9px -2px rgba(77, 200, 143, 0.72);
+
   }
   
   .card-line {
