@@ -132,3 +132,21 @@ select option {
 #hours:focus::placeholder {
     animation: fadeIn 0.5s ease-in-out forwards;
 }
+
+
+/* CSS */
+.leaflet-control-zoom-in span{
+    color: #ffd700;
+}
+
+.leaflet-control-zoom-out span {
+    color: #ffd700;
+}
+
+div.leaflet-control-zoom a:first-child{
+    background-color: #212121;
+}
+
+div.leaflet-control-zoom a:last-child{
+    background-color: #212121;
+}
