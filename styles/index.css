@@ -1,5 +1,6 @@
 body {
   background-color: black;
+  overflow-x: hidden;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Quicksand:wght@300..700&display=swap');
@@ -9,13 +10,14 @@ body {
   src: url('https://drive.google.com/uc?export=download&id=1sqHRjp5meex86YyrdErlL39HfM3eoZdv') format('truetype');
 }
 
+
+
 .playfair-display {
   margin: 100px;
   font-family: 'CustomFont', serif;
   color: white;
   font-size: 90px;
-  max-width: 650px;
-  height: 300px;
+  max-width: 60vw;
 }
 
 .gradient-text {
@@ -28,18 +30,66 @@ body {
 
 /* Define initial position of the vehicle */
 .vehicle {
-  max-height: 880px;
-  max-width: 880px;
+  max-height: 80vh;
+  max-width: 50vw;
   position: absolute;
-  margin: 50px;
-  top: 545px;
-  left: 1172px;
+  margin-top: -22vh;
+  top: 80vh;
+  left: 84vw;
   transform: translate(-50%, -50%);
   opacity: 0; /* Initially hidden */
   transition: opacity 1s ease; /* Smooth transition */
 }
+@media (max-width: 1200px) {
 
-/* Define animation for vehicle */
+  .vehicle {
+    margin-left: -35vw;
+    transition: left  0.4s ease-in-out; /* Smooth transition for left property */
+  }
+  .playfair-display{
+    display: none;
+  }
+
+}
+@media (min-width:1200px) {
+  .buttons {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 1vh;
+    left: 34vw;
+    margin-top: 20px;
+    margin-left: 10px;
+    }
+
+}
+.buttons {
+display: flex;
+justify-content: center;
+top: 1vh;
+left: 34vw;
+margin-top: 20px;
+margin-left: 10px;
+}
+
+
+button {
+  background-color: #ffc400cc; 
+  border: none;
+  font-family: "Quicksand", monospace;
+  font-weight: 450;
+  border-radius: 20px; 
+  padding: 20px 40px;
+  margin: 0 30px ;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  z-index: 500;
+}
+
+.buttons button:hover {
+  background-color: #ffd903; 
+}
+
 @keyframes vehicleAnimation {
   0% { transform: translate(-50%, -50%) scale(1.2); opacity: 0; } /* Start offscreen and invisible */
   100% { transform: translate(-50%, -50%) scale(1); opacity: 1; } /* Move to center and become visible */
@@ -69,30 +119,3 @@ body {
   font-size: 50px;
   
 }
-
-.buttons {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  top: 6px;
-  left: 548px;
-  margin-top: 20px;
-}
-
-.buttons button {
-  background-color: #FFD700; /* Yellow background */
-  border: none;
-  font-family: "Quicksand", monospace;
-  font-weight: 450;
-  border-radius: 20px; /* Rounded corners */
-  padding: 20px 40px;
-  margin: 0 30px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  z-index: 500;
-}
-
-.buttons button:hover {
-  background-color: #FFC107; /* Darker yellow on hover */
-}
-

@@ -1,31 +1,53 @@
 body{
     background-color: black;
 }
-
-.vespa{
-    position: relative;
-    top: 6vh;
-    left: 10vw;
-    z-index: -1;
-    height: 650px;
-    width: auto;
+@media only screen and (max-height: 550px) {
+  .vespa {
+    display: none;
+  }
+  .form{
+    margin: 87vh -10vw;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    box-shadow: -15px 0 25px rgba(221, 199, 55, 0.2), 0 15px 25px rgba(221, 199, 55, 0.2); 
+  }
+}
+@media only screen and (max-width: 980px) {
+  .vespa {
+    display: none;
+  }
+  .form{
+    margin: 87vh -10vw;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
 }
 
+.vespa{
+  position: relative;
+  top: 6vh;
+  left: 10vw;
+  z-index: -1;
+  height: 89vh;
+  width: 26.7vw;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  box-shadow: -15px 0 25px rgba(221, 199, 55, 0.2), 0 15px 25px rgba(221, 199, 55, 0.2); 
+}
+
+
 .form{
+  
     position: relative;
     top: -83.5vh;
     left: 37vw;
     width: 45vw;
     box-shadow: 15px 15px 25px rgba(221, 199, 55, 0.2);
-    height: 86.1vh;
+    height: 83vh;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     backdrop-filter: blur(14px);
     background-color: rgba(255, 255, 255, 0.2);
-    padding: 10px;
+    padding: 5vh 3vw 1vh 1vw;
     text-align: center;
 }
 
@@ -35,7 +57,7 @@ body{
 .form-control{
     position: relative;
     margin: 50px;
-    width: 190px;
+    width: 250px;
   }
 
   .form-control input[type="password"]{
@@ -112,9 +134,9 @@ body{
     background: linear-gradient(to right, rgba(255, 215, 0, 0.1) 1%, transparent 40%,transparent 60% , rgba(255, 215, 0, 0.1) 100%); 
     color: var(--yellow);
     box-shadow: inset 0 0 10px rgba(255, 215, 0, 0.4), 0 0 9px 3px rgba(255, 215, 0, 0.1);
-    top: 60px;
-}
-
+    top: -35px;
+  }
+    
 button:hover {
     color: #b9af53;
     box-shadow: inset 0 0 10px rgba(255, 215, 0, 0.6), 0 0 9px 3px rgba(255, 215, 0, 0.2);
